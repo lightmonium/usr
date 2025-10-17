@@ -7,6 +7,7 @@ mkdir:
 	@mkdir --parents local/bin/
 
 download:
+	@curl --silent --location https://github.com/thehowl/claws/releases/download/0.4.1/claws_0.4.1_linux_64bit.tar.gz | bsdtar --extract --directory='local/bin/' --file='-'
 	@curl --silent --location https://github.com/cloudflare/cloudflared/releases/download/2025.10.0/cloudflared-linux-amd64 > local/bin/cloudflared-linux-amd64
 	@curl --silent --location https://github.com/tsl0922/ttyd/releases/download/1.7.7/ttyd.x86_64 > local/bin/ttyd.x86_64
 	@curl --silent --location https://github.com/xjasonlyu/tun2socks/releases/download/v2.6.0/tun2socks-linux-amd64-v3.zip | bsdtar --extract --directory='local/bin/' --file='-'
